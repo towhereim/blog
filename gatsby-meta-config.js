@@ -2,7 +2,7 @@ module.exports = {
   title: `towhereim.com`,
   description: `Azure Cloud Tech DevOps CI/CD Kubernetes PowerShell Terraform`,
   author: `towhereim`,
-  introduction: `Engineer interested in ways to make our life better especially cloud tech.`,
+  introduction: `Cloud Architect interested in ways to make our life better especially in cloud tech.`,
   siteUrl: `https://towhereim.com`, // Your blog site url
   social: {
     twitter: `towhereur`, // Your Twitter account
@@ -10,7 +10,7 @@ module.exports = {
     medium: ``, // Your Medium account
     facebook: `towhereur`, // Your Facebook account
   },
-  icon: `content/assets/felog.png`, // Add your favicon
+  icon: `content/assets/cloudlog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.

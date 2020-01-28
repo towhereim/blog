@@ -15,6 +15,8 @@ draft: false
 
 어떤 순간이든 즐기려고 노력했지만 힘빠지는 한숨이 절로 나올 때도 더러 있었다.
 
+생채기가 날 지언정, 할 수 있는 만큼 최선을 다해 하루 하루를 의미있는 날들로 만들었다 생각한다.
+
 ## 그리고 2020년
 새해가 시작되었고, 이 시작은 벌써 28일이나 지나버렸다.
 
@@ -26,8 +28,9 @@ draft: false
 
 # Departure
 
-출국을 뜻하는 Departure에 출발이라는 곡명을 딴 김동률의 출발.
+출국을 뜻하는 Departure에 출발이라는 곡명을 붙인 김동률의 출발. 
 
+한국어도 영어도 시작을 알리는 이 단어가 마음에 꽤나 와 닿았다. 어디론가 발걸음을 내딛는 설레임을 곡과 가사에 참 잘 담았다는 느낌이 있다.
 
 
 <iframe width="796" height="597" src="https://www.youtube.com/embed/xgvckGs6xhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -37,7 +40,10 @@ draft: false
 
 클라우드 기술에 관한 심도있는 내용이 아니더라도 꿀팁이 될 만한 내용을 전달하는 공간이자 또한 나를 위한 기록이 되길 희망하며 시작해 보고자 한다.
 
-> 클라우드를 향한 출발! Let's get started!
+> 클라우드 블로깅! 이제 시작해 보련다.
+
 <br/>
 
 ![](/icons/icon-256x256.png)
+
+Departure to Cloud!
