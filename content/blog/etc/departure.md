@@ -37,7 +37,7 @@ draft: false
 
 클라우드 기술에 관한 심도있는 내용이 아니더라도 꿀팁이 될 만한 내용을 전달하는 공간이자 또한 나를 위한 기록이 되길 희망하며 시작해 보고자 한다.
 
-> Let's get started!
+> 클라우드를 향한 출발! Let's get started!
 <br/>
 
 ![](/icons/icon-256x256.png)

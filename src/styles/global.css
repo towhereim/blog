@@ -20,3 +20,9 @@ th[align="right"], td[align="right"] {
 div#gatsby-focus-wrapper div:nth-child(2) {
     max-width: 60rem!important;
 }
+
+iframe {
+    left: 3%!important;
+    right: 3%!important;
+    width: 96%!important;
+}
