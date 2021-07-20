@@ -1,18 +1,18 @@
 ---
-title: Stop-ThisAzVM
+title: "[PowerShell] Azure VM내에서 VM 종료하기(deallocated)"
 date: 2021-07-20 17:07:01
 category: pwsh
 draft: false
 ---
+####
 
-# [PowerShell] Azure VM내에서 VM 종료하기(deallocated)
+Azure에서 VM을 종료하는 방법은 여러가지가 있지만, 여기에서는 VM 내에서 VM을 종료하는 방법에 대해 다룬다. 
 
-date: July 20, 2021
-Tag: azure, powershell
+최신 PowerShell은 Multi-Platform을 지원하므로 Windows 뿐 아니라 Linux, Mac을 가리지 않고 잘 실행된다. 
+아래 스크립트는 Azure 내 Windows, Linux에서 실행가능하다. (Azure에서는 Mac VM을 지원하지 않는다.)
 
-Azure에서 VM을 종료하는 방법은 여러가지가 있지만, 여기에서는 VM 내에서 VM을 종료하는 방법에 대해 다룬다. 최신 PowerShell은 Multi-Platform을 지원하므로 Windows 뿐 아니라 Linux, Mac을 가리지 않고 잘 실행된다. 하지만, Azure에서 Mac VM을 지원하지 않으므로, 아래 스크립트는 Windows, Linux에서 실행된다.
-
-Azure에서는 VM의 상태가 Stopped(Deallocated)가 되어야만 과금되지 않는다. 
+## Deallocated = Not charged
+Azure에서는 VM의 상태가 Stopped(Deallocated)가 되어야만 과금되지 않는다.
 
 ![images/win-shutdown.png](images/win-shutdown.png)
 
@@ -22,19 +22,25 @@ VM 내부에서 종료시 Azure에서는 Stopped로 표시되며, 이 상태에�
 
 ![images/azure-vm-stopped.png](images/azure-vm-stopped.png)
 
-> **사용자가 VM 내부에서 Deallocate 할 수 있는 방법이 없을까?**
+## **사용자가 VM 내부에서 Deallocate 할 수 있는 방법이 없을까?**
 
-여기 있다. 바로, PowerShell AzModule에 포함된 Stop-AzVM 명령어로 VM을 종료하는 스크립트를 실행하여, 종료 시킬수 있다.
+> Answer - PowerShell : Stop-AzVM
 
+여기 있다. 바로, PowerShell AzModule에 포함된 `Stop-AzVM` 명령어로 VM을 종료하는 스크립트를 실행하여, 종료 시킬수 있다.<br><br>
+
+### PowerShell / AzModule 설치
 먼저 작업할 VM 내에 PowerShell 최신 버전과 AzModule을 설치하자.
 
-Windows 외에 Linux, MacOS, 에서
+아래 링크에 들어가면 좌측메뉴에 Windows 외에 Linux, MacOS 에서 설치하는 방법에 대해서도 나와있다.
 
 [https://docs.microsoft.com/ko-kr/powershell/scripting/install/installing-powershell-core-on-windows](https://docs.microsoft.com/ko-kr/powershell/scripting/install/installing-powershell-core-on-windows)
 
 [https://docs.microsoft.com/ko-kr/powershell/azure/install-az-ps](https://docs.microsoft.com/ko-kr/powershell/azure/install-az-ps)
 
-PowerShell로 Azure 명령어를 실행하기 위해서는 Azure 로그인이 필요한데, 스크립트 실행시 Azure Portal ID/PW를 매번 입력하기는 번거로운 일이므로, Azure AD App(Service Principal)을 생성하여 스크립트에 미리 심어두자.
+
+### Azure AD App (Service Principal) 생성
+PowerShell로 Azure 명령어를 실행하기 위해서는 Azure 로그인이 필요한데, 스크립트 실행시 Azure Portal ID/PW를 매번 입력하기는 번거로운 일이다. 
+이럴 땐 Azure AD App(Service Principal)을 생성하여 스크립트에 미리 심어두자.
 
 아래 명령어는 Azure CLI 이며, 한줄로 Azure AD App을 만들어 주고 권한 부여를 해 준다.
 
@@ -65,9 +71,8 @@ $UnsecureSecret
 
 위에서 표시된 정보를 복사해 둔다.
 
-아래 스크립트를 파일로 만들고 위에 정보를 스크립트 상단 변수에 입력하여 저장한다.
-
 ### Stop-ThisAzVM.ps1
+아래 스크립트를 파일로 만들고 위에 정보를 스크립트 상단 변수에 입력하여 저장한다.
 
 ```powershell
 # Script : Stop-ThisAzVM.ps1
