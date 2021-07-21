@@ -75,9 +75,11 @@ $UnsecureSecret
 아래 스크립트를 파일로 만들고 위에 정보를 스크립트 상단 변수에 입력하여 저장한다.
 
 ```powershell
-# Script : Stop-ThisAzVM.ps1
-# Description : Deallocate Azure VM
-# Author : towhereim.com
+# Title    : Stop-ThisAzVM.ps1
+# Desc     : Deallocate Azure VM
+# Platform : Windows, Linux VM on Azure
+# Date     : 2021-07-20
+# Author   : towhereim.com
 
 $appName = "your.app"
 $tenantId = "785087ba-1e72-4e7d-****-4a9639137a66"
@@ -111,6 +113,7 @@ function Install-AzModule {
 #endregion
 
 Connect-ToAzure
+Install-AzModule
 
 $hostname = hostname
 Get-AzVM -Name $hostname | Stop-AzVM -Force
