@@ -94,7 +94,6 @@ function Connect-ToAzure {
     catch {
         Write-Error "Cannot Login to Azure"
     }
-
 }
 #endregion
 
