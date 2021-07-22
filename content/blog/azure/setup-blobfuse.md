@@ -64,7 +64,7 @@ mountloc="/myblob"
 
 # Create Folder
 newdir () {
-	if [ "$#" -gt 0 ]; then
+	if [ $# -eq 0 ]; then
 		echo "Usage : newdir {directory}"
 	elif [ ! -d $1 ]; then
         sudo mkdir $1 -p
