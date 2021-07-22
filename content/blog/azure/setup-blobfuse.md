@@ -5,7 +5,7 @@ category: azure
 draft: false
 ---
 
-![](images/setup-blobfuse.png)
+![](images/setup-blobfuse.svg)
 
 Azure Linux VM에서 Azure Storage Account - Blob을 마운트하여 파일시스템의 일부처럼 사용할 수 있게 하는 blobfuse라는 툴이 있다.
 
